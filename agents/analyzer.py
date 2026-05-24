@@ -28,6 +28,15 @@ class Analyzer:
         response = llm.invoke([HumanMessage(content=self.prompt())])
         return response.content
     
+
+# class AnalysisResult:
+#     def __init__(self, attack_type, threat_score, severity, reasons, mitre_techniques):
+#         self.attack_type = attack_type
+#         self.threat_score = threat_score
+#         self.severity = severity
+#         self.reasons = reasons
+#         self.mitre_techniques = mitre_techniques
+
 import sys
 sys.path.append("..")
 from collector import LogCollector
