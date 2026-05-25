@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage
-from .knowledge import KnowledgeAgent
+from knowledge import KnowledgeAgent
 
 load_dotenv()
 ma_cle = os.getenv("GROQ_API_KEY")
