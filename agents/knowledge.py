@@ -1,4 +1,4 @@
-from collector import SecurityEvent, LogCollector
+from .collector import SecurityEvent, LogCollector
 import chromadb
 import os
 from dotenv import load_dotenv
@@ -20,14 +20,15 @@ class KnowledgeAgent:
             n_results=2  # retourne les 2 techniques les plus proches
         )
 
-        print(results)
+        documents = results['documents'][0]
+        return "\n".join(documents)
 
     
-from collector import LogCollector
+# from collector import LogCollector
 
-line = "May  3 14:22:01 server sshd[1234]: Failed password for root from 185.220.101.5"
-collector = LogCollector(line)
-event = collector.parse()
+# line = "May  3 14:22:01 server sshd[1234]: Failed password for root from 185.220.101.5"
+# collector = LogCollector(line)
+# event = collector.parse()
 
-agent = KnowledgeAgent()
-agent.query(event)
+# agent = KnowledgeAgent()
+# agent.query(event)

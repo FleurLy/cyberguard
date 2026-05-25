@@ -1,4 +1,4 @@
-from mitre.mitre_data import techniques_attaque
+from knowledge.mitre.mitre_data import techniques_attaque
 import chromadb
 from chromadb.utils import embedding_functions
 import os
