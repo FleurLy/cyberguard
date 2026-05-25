@@ -1,6 +1,6 @@
 
-from analyzer import Analyzer
-from knowledge import KnowledgeAgent
+from agents.analyzer import Analyzer
+from agents.knowledge import KnowledgeAgent
 from datetime import datetime
 
 
@@ -30,9 +30,9 @@ class Report:
             f.write("Rapport généré automatiquement par CyberGuard AI")
 
 
-from collector import LogCollector
-from knowledge import KnowledgeAgent
-from analyzer import Analyzer
+from agents.collector import LogCollector
+# from knowledge import KnowledgeAgent
+# from analyzer import Analyzer
 
 line = "May  3 14:22:01 server sshd[1234]: Failed password for root from 185.220.101.5"
 event = LogCollector(line).parse()

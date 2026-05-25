@@ -1,4 +1,4 @@
-from collector import SecurityEvent, LogCollector
+from agents.collector import SecurityEvent
 import chromadb
 import os
 from dotenv import load_dotenv
